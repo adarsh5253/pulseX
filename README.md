@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/48702c70-4170-44b2-a873-79741d6b7b4a
+https://pulse-clinic-mate.lovable.app
 
 ## How can I edit this code?
 
