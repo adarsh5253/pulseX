@@ -7,6 +7,8 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Activity, Calendar, Clock, User, LogOut, CreditCard, Bell, MapPin } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { NotificationSystem } from "@/components/NotificationSystem";
+import { PaymentIntegration } from "@/components/PaymentIntegration";
 
 const PatientDashboard = () => {
   const [showBooking, setShowBooking] = useState(false);
@@ -24,9 +26,7 @@ const PatientDashboard = () => {
             </div>
           </div>
           <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon">
-              <Bell className="h-5 w-5" />
-            </Button>
+            <NotificationSystem />
             <Button variant="ghost" size="icon">
               <LogOut className="h-5 w-5" />
             </Button>
@@ -144,10 +144,11 @@ const PatientDashboard = () => {
                   <span className="font-medium">Consultation Fee</span>
                   <span className="text-2xl font-bold text-primary">₹500</span>
                 </div>
-                <Button className="w-full" variant="hero" size="lg">
-                  <CreditCard className="mr-2 h-5 w-5" />
-                  Proceed to Payment
-                </Button>
+                <PaymentIntegration 
+                  amount={500}
+                  doctorName="Sharma"
+                  appointmentId="APT001"
+                />
               </div>
             </CardContent>
           </Card>

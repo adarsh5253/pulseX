@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Activity, Calendar, Clock, DollarSign, User, LogOut, Settings, CheckCircle, XCircle } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { NotificationSystem } from "@/components/NotificationSystem";
 
 // Mock data
 const mockQueue = [
@@ -50,6 +51,7 @@ const DoctorDashboard = () => {
             </div>
           </div>
           <div className="flex items-center space-x-4">
+            <NotificationSystem />
             <Button variant="ghost" size="icon">
               <Settings className="h-5 w-5" />
             </Button>

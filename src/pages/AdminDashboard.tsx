@@ -7,6 +7,8 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Activity, Users, Clock, DollarSign, Settings, LogOut, Plus, Edit, Trash2, Pause, Play, ArrowUp, ArrowDown } from "lucide-react";
+import { NotificationSystem } from "@/components/NotificationSystem";
+import { AdminControls } from "@/components/AdminControls";
 
 const AdminDashboard = () => {
   const [isPaused, setIsPaused] = useState(false);
@@ -36,6 +38,7 @@ const AdminDashboard = () => {
             </div>
           </div>
           <div className="flex items-center space-x-4">
+            <NotificationSystem />
             <Button variant="ghost" size="icon">
               <Settings className="h-5 w-5" />
             </Button>
@@ -88,6 +91,11 @@ const AdminDashboard = () => {
               <p className="text-xs text-muted-foreground mt-1">Today's total</p>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Admin Controls */}
+        <div className="mb-8">
+          <AdminControls />
         </div>
 
         {/* Main Content Tabs */}
