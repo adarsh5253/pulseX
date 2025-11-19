@@ -16,7 +16,8 @@ const Index = () => {
           <nav className="hidden lg:flex space-x-6">
             <a href="#features" className="text-foreground hover:text-primary transition-colors">Features</a>
             <a href="#portals" className="text-foreground hover:text-primary transition-colors">Portals</a>
-            <a href="#how-it-works" className="text-foreground hover:text-primary transition-colors">How It Works</a>
+            <Link to="/payments" className="text-foreground hover:text-primary transition-colors">Payments</Link>
+            <Link to="/notifications" className="text-foreground hover:text-primary transition-colors">Notifications</Link>
             <Link to="/live-display" className="text-foreground hover:text-primary transition-colors">Live Display</Link>
           </nav>
           <div className="flex space-x-2 sm:space-x-3">
@@ -127,35 +128,41 @@ const Index = () => {
             <p className="text-lg sm:text-xl text-muted-foreground">Everything you need for clinic management</p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            <Card className="border-2 hover:border-primary transition-all hover:shadow-lg">
-              <CardHeader>
-                <Clock className="h-10 w-10 sm:h-12 sm:w-12 text-success mb-4" />
-                <CardTitle className="text-lg sm:text-xl">Live Queue Display</CardTitle>
-                <CardDescription>
-                  Real-time display for waiting areas showing current consultations
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <Link to="/live-display" className="block">
+              <Card className="border-2 hover:border-primary transition-all hover:shadow-lg cursor-pointer h-full">
+                <CardHeader>
+                  <Clock className="h-10 w-10 sm:h-12 sm:w-12 text-success mb-4" />
+                  <CardTitle className="text-lg sm:text-xl">Live Queue Display</CardTitle>
+                  <CardDescription>
+                    Real-time display for waiting areas showing current consultations
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
 
-            <Card className="border-2 hover:border-primary transition-all hover:shadow-lg">
-              <CardHeader>
-                <Zap className="h-10 w-10 sm:h-12 sm:w-12 text-warning mb-4" />
-                <CardTitle className="text-lg sm:text-xl">Smart Notifications</CardTitle>
-                <CardDescription>
-                  Automated alerts for appointments, queue updates, and changes
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <Link to="/notifications" className="block">
+              <Card className="border-2 hover:border-primary transition-all hover:shadow-lg cursor-pointer h-full">
+                <CardHeader>
+                  <Zap className="h-10 w-10 sm:h-12 sm:w-12 text-warning mb-4" />
+                  <CardTitle className="text-lg sm:text-xl">Smart Notifications</CardTitle>
+                  <CardDescription>
+                    Automated alerts for appointments, queue updates, and changes
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
 
-            <Card className="border-2 hover:border-primary transition-all hover:shadow-lg">
-              <CardHeader>
-                <Activity className="h-10 w-10 sm:h-12 sm:w-12 text-primary mb-4" />
-                <CardTitle className="text-lg sm:text-xl">Payment Integration</CardTitle>
-                <CardDescription>
-                  Seamless payment processing with multiple payment options
-                </CardDescription>
-              </CardHeader>
-            </Card>
+            <Link to="/payments" className="block">
+              <Card className="border-2 hover:border-primary transition-all hover:shadow-lg cursor-pointer h-full">
+                <CardHeader>
+                  <Activity className="h-10 w-10 sm:h-12 sm:w-12 text-primary mb-4" />
+                  <CardTitle className="text-lg sm:text-xl">Payment Integration</CardTitle>
+                  <CardDescription>
+                    Seamless payment processing with multiple payment options
+                  </CardDescription>
+                </CardHeader>
+              </Card>
+            </Link>
           </div>
         </div>
       </section>
@@ -236,7 +243,8 @@ const Index = () => {
               <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
                 <li><a href="#features" className="hover:text-primary transition-colors">Features</a></li>
                 <li><a href="#portals" className="hover:text-primary transition-colors">Portals</a></li>
-                <li><a href="#how-it-works" className="hover:text-primary transition-colors">How It Works</a></li>
+                <li><Link to="/payments" className="hover:text-primary transition-colors">Payments</Link></li>
+                <li><Link to="/notifications" className="hover:text-primary transition-colors">Notifications</Link></li>
               </ul>
             </div>
             <div>
